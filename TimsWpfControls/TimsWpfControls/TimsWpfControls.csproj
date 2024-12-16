@@ -1,19 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFrameworks>net48;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net8.0-windows;net6.0-windows;net48</TargetFrameworks>
     <AutoGenerateBindingRedirects Condition=" $(TargetFramework.StartsWith('net4')) ">true</AutoGenerateBindingRedirects>
     <UseWPF>true</UseWPF>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>latestmajor</LangVersion>
+	<Version>1.0.0</Version>
+	<Authors>gszobi</Authors>
+	<PackageId>TimsWpfControlsExtended</PackageId>
+	<Description>Some missing WPF Controls that integrates with MahApps.Metro</Description>
+	<PackageProjectUrl>https://github.com/amargo/TimsWpfControls</PackageProjectUrl>
+	<PackageTags>Wpf,MultiSelectionComboBox</PackageTags>
+	<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageReleaseNotes>Upgrade</PackageReleaseNotes>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageOutputPath>$(OutputPath)</PackageOutputPath>
+	<RepositoryUrl>https://github.com/amargo/TimsWpfControls</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>	  
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="IndexRange" Version="1.0.0" />
-    <PackageReference Include="MahApps.Metro" Version="2.*" />
-    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.9.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="Ookii.Dialogs.Wpf" Version="3.1.0" />
+	<ItemGroup>
+		<None Include="../../README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="IndexRange" Version="1.0.3" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>
